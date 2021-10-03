@@ -94,7 +94,7 @@
               </p>
               <a class="slider-link link" href="">подробнее</a>
               <table class="slider-table-specifications">
-                <tр>
+                <tr>
                   <th>800 м</th>
                   <th>50 м</th>
                 </tr>
@@ -116,7 +116,8 @@
               <p class="slider-part">02</p>
               <h3>Худеем правильно!</h3>
               <p class="slider-description">
-                Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+                Мотивирующие фитнес-браслеты помогут найти в себе силы не
+                пропускать занятия и соблюдать диету.
               </p>
               <a class="slider-link link" href="">подробнее</a>
               <table class="slider-table-specifications">
@@ -145,7 +146,7 @@
               </p>
               <a class="slider-link link" href="">подробнее</a>
               <table class="slider-table-specifications">
-                <tр>
+                <tr>
                   <th>8,5 м</th>
                   <th>5 кг</th>
                   <th>Карбон</th>
@@ -197,7 +198,9 @@
         <ul class="sections-categories-list">
           <li class="sections-categories-item">
             <div class="sections-categories--decor-item">
-              <a class="sections-categories-link" href="">Виртуальная реальность</a>
+              <a class="sections-categories-link" href=""
+                >Виртуальная реальность</a
+              >
             </div>
           </li>
           <li class="sections-categories-item">
@@ -244,21 +247,31 @@
           <div class="tab-content-guarantee">
             <h3>Гарантия</h3>
             <p>
-              Если из-за возгорания купленного у нас товара у вас
-              сгорит дом — не переживайте, мы выдадим вам новый.
-              Товар, не дом, конечно же.
+              Если из-за возгорания купленного у нас товара у вас сгорит дом —
+              не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
             </p>
           </div>
           <div class="tab-content-credit">
             <h3>Кредит</h3>
             <p>
-              Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.
+              Залезть в долговую яму стало проще! Кредитные консультанты
+              подберут для вас наиболее выгодные условия кредита. Выгодные для
+              банка, разумеется.
             </p>
           </div>
           <div class="services-tabs-buttons">
-            <button class="button-services-tabs content-delivery" type="button">Доставка</button>
-            <button class="button-services-tabs content-guarantee" type="button">Гарантия</button>
-            <button class="button-services-tabs content-credit" type="button">Кредит</button>
+            <button class="button-services-tabs content-delivery" type="button">
+              Доставка
+            </button>
+            <button
+              class="button-services-tabs content-guarantee"
+              type="button"
+            >
+              Гарантия
+            </button>
+            <button class="button-services-tabs content-credit" type="button">
+              Кредит
+            </button>
           </div>
         </div>
       </section>
@@ -266,90 +279,84 @@
 
       <!--Доставка под заказ begin-->
       <section class="modal-delivery">
-        <a class="modal-delivery-link" href="#">Доставим редкий товар под заказ</a>
+        <a class="modal-delivery-link" href="#"
+          >Доставим редкий товар под заказ</a
+        >
       </section>
       <!--Доставка под заказ end-->
 
       <!-- Форма обратной связи begin-->
       <form
-          class="send-form"
-          action="https://echo.htmlacademy.ru/"
-          method="post"
-        >
-          <p class="send-form--name-surname">
-            <label class="send-form-label" for="send-form--name-surname"
-              >Ваше имя:</label
+        class="send-form"
+        action="https://echo.htmlacademy.ru/"
+        method="post"
+      >
+        <p class="send-form--name-surname">
+          <label class="send-form-label" for="send-form--name-surname"
+            >Ваше имя:</label
+          >
+          <input
+            class="send-form-input"
+            id="send-form--name-surname"
+            type="text"
+            name="name-surname"
+            placeholder="Имя Фамилия"
+          />
+          <span class="send-form--name-surname---sign"
+            >Пожалуйста, представьтесь</span
+          >
+        </p>
+        <p class="send-form--email">
+          <label class="send-form-label" for="send-form--email"
+            >Ваш e-mail:</label
+          >
+          <input
+            class="send-form-input"
+            id="send-form--email"
+            type="email"
+            name="email"
+            placeholder="e-mail@mail.ru"
+          />
+          <span class="send-form--email---sign">Забавный у вас адрес</span>
+        </p>
+        <p class="send-form--product">
+          <label class="send-form-label" for="send-form--product"
+            >Что нужно привезти:</label
+          >
+          <textarea
+            class="send-form-input"
+            id="send-form--product"
+            name="product"
+            placeholder="В свободной форме"
+            rows="1"
+          ></textarea>
+        </p>
+        <div class="send-form--number">
+          <label class="send-form-label" for="send-form--number"
+            >Количество:</label
+          >
+          <button class="info" type="button">
+            <span class="visually-hidden"
+              >Посмотреть дополнительную информацию</span
             >
+          </button>
+          <div class="number">
+            <button class="number-minus" type="button">-</button>
             <input
               class="send-form-input"
-              id="send-form--name-surname"
+              id="send-form--number"
               type="text"
-              name="name-surname"
-              placeholder="Имя Фамилия"
+              name="number"
+              value="1"
             />
-            <span class="send-form--name-surname---sign"
-              >Пожалуйста, представьтесь</span
-            >
-          </p>
-          <p class="send-form--email">
-            <label class="send-form-label" for="send-form--email">Ваш e-mail:</label            >
-            <input
-              class="send-form-input"
-              id="send-form--email"
-              type="email"
-              name="email"
-              placeholder="e-mail@mail.ru"
-            />
-            <span class="send-form--email---sign">Забавный у вас адрес</span>
-          </p>
-          <p class="send-form--product">
-            <label class="send-form-label" for="send-form--product"
-              >Что нужно привезти:</label
-            >
-            <textarea 
-              class="send-form-input"
-              id="send-form--product"
-              type="text"
-              name="product"
-              placeholder="В свободной форме"
-              rows="1"></textarea>
-          </p>
-          <div class="send-form--number">
-            <label class="send-form-label" for="send-form--number"
-              >Количество:</label
-            >
-            <button class="info" type="button">
-              <span class="visually-hidden"
-                >Посмотреть дополнительную информацию</span
-              >
-            </button>
-            <div class="number">
-              <button
-                class="number-minus"
-                type="button"
-              >
-                -
-              </button>
-              <input
-                class="send-form-input"
-                id="send-form--number"
-                type="text"
-                name="number"
-                value="1"
-              />
-              <button
-                class="number-plus"
-                type="button"
-              >
-                +
-              </button>
-            </div>
+            <button class="number-plus" type="button">+</button>
           </div>
-          <!-- Кнопка для отправки формы -->
-          <button class="button" type="submit">Отправить сообщение</button>
+        </div>
+        <!-- Кнопка для отправки формы -->
+        <button class="button" type="submit">Отправить сообщение</button>
       </form>
       <!-- Форма обратной связи end-->
-      
+
       <!--О компании begin-->
       <section class="about-company">
         <h3>О нас</h3>
@@ -371,7 +378,8 @@
       <!--О компании end-->
 
       <!--Контакты begin-->
-      <section class="сontacts" id="contacts"><h2 class="visually-hidden">Контакты</h2>
+      <section class="сontacts" id="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
         <h3>Контакты</h3>
         <p>
           Вы можете забрать товар сами, заехав в наш офис. Заодно, сможете
@@ -407,13 +415,13 @@
           action="https://echo.htmlacademy.ru/"
           method="post"
         >
-        <input
-          class="mailing-form-input"
-          type="email"
-          name="email"
-          placeholder="Ваш e-mail"
-        />
-        <button class="button-mailing-form" type="submit">Подписаться</button>
+          <input
+            class="mailing-form-input"
+            type="email"
+            name="email"
+            placeholder="Ваш e-mail"
+          />
+          <button class="button-mailing-form" type="submit">Подписаться</button>
         </form>
         <span class="mailing-text">Это бесплатно</span>
       </section>
@@ -468,8 +476,8 @@
       </section>
 
       <a class="htmlacademy-link" href="https://htmlacademy.ru/"
-        ><img class="htmlacademy-logo" src="" alt=".html academy"></a
-      >
+        ><img class="htmlacademy-logo" src="" alt=".html academy"
+      /></a>
     </footer>
   </body>
 </html>
