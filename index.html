@@ -26,13 +26,13 @@
           <input name="search" placeholder="Поиск по сайту" type="search" />
           <button class="button-search" type="submit">Найти</button>
         </form>
-        <a class="navigation-link-login navigation-user" href="">Войти</a>
+        <a class="navigation-link-login navigation-link-user" href="">Войти</a>
         <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link" href="">Сравнить</a>
+          <li class="navigation-item-user">
+            <a class="navigation-link-user" href="">Сравнить</a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="">Корзина</a>
+          <li class="navigation-item-user">
+            <a class="navigation-link-user" href="">Корзина</a>
           </li>
         </ul>
         <!--Пользовательское меню end-->
@@ -104,7 +104,7 @@
                 Этот обычный, на первый взгляд, квадрокоптер оснащен мощным
                 лазером, замаскированным под стандартную камеру.
               </p>
-              <a class="slider-link link" href="">подробнее</a>
+              <a class="slider-link link-for-page" href="">подробнее</a>
               <table class="slider-table-specifications">
                 <tr>
                   <th>800 м</th>
@@ -137,7 +137,7 @@
                 Мотивирующие фитнес-браслеты помогут найти в себе силы не
                 пропускать занятия и соблюдать диету.
               </p>
-              <a class="slider-link link" href="">подробнее</a>
+              <a class="slider-link link-for-page" href="">подробнее</a>
               <table class="slider-table-specifications">
                 <tr>
                   <th>48 часов</th>
@@ -163,12 +163,12 @@
             <!-- Блок с описанием товара -->
             <div class="slider-part-item">
               <p class="slider-part">01</p>
-              <h3>Порхает как бабочка, жалит как пчела!</h3>
+              <h3>Делай селфи, как Бен Стиллер!</h3>
               <p class="slider-description">
-                Этот обычный, на первый взгляд, квадрокоптер оснащен мощным
-                лазером, замаскированным под стандартную камеру.
+                Самая длинная палка для селфи доступна в нашем магазине. Восемь
+                (Восемь, Карл!) метров длиной и весом всего 5 кг.
               </p>
-              <a class="slider-link link" href="">подробнее</a>
+              <a class="slider-link link-for-page" href="">подробнее</a>
               <table class="slider-table-specifications">
                 <tr>
                   <th>8,5 м</th>
@@ -221,36 +221,40 @@
         <h2 class="visually-hidden">Категории каталога</h2>
         <ul class="sections-categories-list">
           <li class="sections-categories-item">
-            <div class="sections-categories--decor-item">
-              <a class="sections-categories-link" href=""
-                >Виртуальная реальность</a
-              >
-            </div>
+            <a class="sections-categories-link" href="">
+              <div class="sections-categories--decor-item"></div>
+              <span>Виртуальная реальность</span>
+            </a>
           </li>
           <li class="sections-categories-item">
-            <div class="sections-categories--decor-item">
-              <a class="sections-categories-link" href="">Моноподы для селфи</a>
-            </div>
+            <a class="sections-categories-link" href="">
+              <div class="sections-categories--decor-item"></div>
+              <span>Моноподы для селфи</span>
+            </a>
           </li>
           <li class="sections-categories-item">
-            <div class="sections-categories--decor-item">
-              <a class="sections-categories-link" href="">Экшн-камеры</a>
-            </div>
+            <a class="sections-categories-link" href="">
+              <div class="sections-categories--decor-item"></div>
+              <span>Экшн-камеры</span>
+            </a>
           </li>
           <li class="sections-categories-item">
-            <div class="sections-categories--decor-item">
-              <a class="sections-categories-link" href="">Фитнес-браслеты</a>
-            </div>
+            <a class="sections-categories-link" href="">
+              <div class="sections-categories--decor-item"></div>
+              <span>Фитнес-браслеты</span>
+            </a>
           </li>
           <li class="sections-categories-item">
-            <div class="sections-categories--decor-item">
-              <a class="sections-categories-link" href="">Умные часы</a>
-            </div>
+            <a class="sections-categories-link" href="">
+              <div class="sections-categories--decor-item"></div>
+              <span>Умные часы</span>
+            </a>
           </li>
           <li class="sections-categories-item">
-            <div class="sections-categories--decor-item">
-              <a class="sections-categories-link" href="">Квадрокоптеры</a>
-            </div>
+            <a class="sections-categories-link" href="">
+              <div class="sections-categories--decor-item"></div>
+              <span>Квадрокоптеры</span>
+            </a>
           </li>
         </ul>
       </section>
@@ -284,16 +288,22 @@
             </p>
           </div>
           <div class="services-tabs-buttons">
-            <button class="button-services-tabs content-delivery" type="button">
+            <button
+              class="btn button-services-tabs content-delivery"
+              type="button"
+            >
               Доставка
             </button>
             <button
-              class="button-services-tabs content-guarantee"
+              class="btn button-services-tabs content-guarantee"
               type="button"
             >
               Гарантия
             </button>
-            <button class="button-services-tabs content-credit" type="button">
+            <button
+              class="btn button-services-tabs content-credit"
+              type="button"
+            >
               Кредит
             </button>
           </div>
@@ -315,6 +325,10 @@
         action="https://echo.htmlacademy.ru/"
         method="post"
       >
+        <h3>Доставка под заказ</h3>
+        <button class="button-close">
+          <span class="visually-hidden">закрыть</span>
+        </button>
         <p class="send-form--name-surname">
           <label class="send-form-label" for="send-form--name-surname"
             >Ваше имя:</label
@@ -377,7 +391,7 @@
           </div>
         </div>
         <!-- Кнопка для отправки формы -->
-        <button class="button" type="submit">Отправить сообщение</button>
+        <button class="btn button" type="submit">Отправить</button>
       </form>
       <!-- Форма обратной связи end-->
 
@@ -397,7 +411,7 @@
           <li class="about-company--delivery-item">СДИК</li>
           <li class="about-company--delivery-item">ТоксБерри</li>
         </ul>
-        <a class="about-company--link link" href="">Подробнее о нас</a>
+        <a class="about-company--link link-for-page" href="">Подробнее о нас</a>
       </section>
       <!--О компании end-->
 
@@ -423,7 +437,7 @@
           <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
           <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
         </ul>
-        <a class="contacts--link link" href="">Напишите нам</a>
+        <a class="contacts--link link-for-page" href="">Напишите нам</a>
       </section>
       <!--О компании end-->
 
@@ -452,12 +466,15 @@
       <!--Рассылка end-->
     </main>
 
+    <!--footer-->
     <footer class="main-footer">
       <a class="footer-logo-link" href="index.html">
         <img
           class="footer-logo-img"
           src="img/decor/footer-logo.svg"
           alt="Логотип device"
+          width="145"
+          height="36"
         />
       </a>
       <div class="footer-address">
@@ -476,13 +493,13 @@
         </ul>
       </div>
 
-      <section class="footer-phone">
+      <div class="footer-phone">
         <a class="footer-contacts-phone" href="tel:88128121212"
           >Тел.: +7 (812) 812-12-12</a
         >
-      </section>
+      </div>
 
-      <section class="footer-social">
+      <div class="footer-social">
         <h2 class="main-footer-title">Мы в соцсетях</h2>
         <ul class="footer-social-list">
           <li class="footer-social-item">
@@ -501,7 +518,7 @@
             </a>
           </li>
         </ul>
-      </section>
+      </div>
 
       <a class="htmlacademy-link" href="https://htmlacademy.ru/"
         ><img
