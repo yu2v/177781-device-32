@@ -40,29 +40,22 @@ body {
   background-color: #ffffff;
 }
 
-h3 {
+.slider h3,
+.services h3,
+.send-form h3,
+.about-company h3,
+.mailing h3 {
   font-family: "Raleway", "Arial", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
-}
-
-ul {
-  list-style-type: none;
-}
-
-ol {
-  list-style-type: none;
+  color: #000000;
 }
 
 .main-header {
   background-color: #ffe17f;
   color: #000000;
-}
-
-a {
-  text-decoration: none;
 }
 
 .btn {
@@ -111,10 +104,16 @@ a {
   /*background-image: url(/img/decor/link-for-page.svg);*/
   background-repeat: no-repeat;
   background-position: 50%;
+
+  text-decoration: none;
 }
 
 /* Главная навигация */
 /*Основное меню*/
+.navigation-list {
+  list-style-type: none;
+}
+
 .navigation-link {
   font-family: "Raleway", "Arial", sans-serif;
   font-weight: 800;
@@ -123,26 +122,24 @@ a {
   line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  text-decoration: none;
 
   color: #000000;
 }
+
 /*Пользовательское меню*/
 .navigation-link-user {
-  font-family: "Rubik", "Arial", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 19px;
+  text-decoration: none;
 
   color: #000000;
 }
 
 .navigation-link-logout {
-  font-family: "Rubik", "Arial", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 19px;
+  text-decoration: none;
 
   color: #000000;
   opacity: 0.3;
@@ -150,11 +147,9 @@ a {
 
 /*Основное меню_саб-меню (скрытое)*/
 .sub-menu-cat a {
-  font-family: "Rubik", "Arial", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 18px;
+  text-decoration: none;
 
   color: #000000;
 }
@@ -167,9 +162,12 @@ a {
 
 /*Слайдер*/
 
+.slider-list,
+.slider-pagination {
+  list-style-type: none;
+}
+
 .slider-part {
-  font-family: "Rubik", "Arial", sans-serif;
-  font-style: normal;
   font-weight: 800;
   font-size: 180px;
   line-height: 30px;
@@ -188,13 +186,10 @@ a {
 .slider-link {
   display: block; /*Временно*/
   width: 220px;
-  height: 20px;
+  min-height: 20px;
 }
 
 .slider-table-specifications th {
-  font-family: "Rubik", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 36px;
   line-height: 30px;
 
@@ -212,27 +207,32 @@ a {
 }
 
 .slider-prev {
-  background-image: url(/img/decor/slider-prev.svg);
+  background-image: url(../img/decor/slider-prev.svg);
   background-color: #ffffff;
   background-repeat: no-repeat;
   border: none;
 }
 
 .slider-next {
-  background-image: url(/img/decor/slider-next.svg);
+  background-image: url(../img/decor/slider-next.svg);
   background-color: #ffffff;
   background-repeat: no-repeat;
   border: none;
 }
 
 /*Категории каталога*/
+
 .sections-categories-list {
+  list-style-type: none;
   display: flex;
-  flex-direction: row;
 }
 
 .sections-categories-item {
   width: 160px;
+}
+
+.sections-categories-link {
+  text-decoration: none;
 }
 
 .sections-categories-link span {
@@ -253,40 +253,33 @@ a {
   height: 160px;
 }
 
-.sections-categories-item:nth-child(1) div {
-  background-image: url(/img/decor/categories-1.svg);
+.sections-categories--decor-item {
   background-repeat: no-repeat;
   background-position: 50%;
 }
 
-.sections-categories-item:nth-child(2) div {
-  background-image: url(/img/decor/categories-2.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 100%;
+.sections-categories--decor-item-vr {
+  background-image: url(../img/decor/categories-1.svg);
 }
 
-.sections-categories-item:nth-child(3) div {
-  background-image: url(/img/decor/categories-3.svg);
-  background-repeat: no-repeat;
-  background-position: 50%;
+.sections-categories--decor-item-mp {
+  background-image: url(../img/decor/categories-2.svg);
 }
 
-.sections-categories-item:nth-child(4) div {
-  background-image: url(/img/decor/categories-4.svg);
-  background-repeat: no-repeat;
-  background-position: 50%;
+.sections-categories--decor-item-ac {
+  background-image: url(../img/decor/categories-3.svg);
 }
 
-.sections-categories-item:nth-child(5) div {
-  background-image: url(/img/decor/categories-5.svg);
-  background-repeat: no-repeat;
-  background-position: 50%;
+.sections-categories--decor-item-fb {
+  background-image: url(../img/decor/categories-4.svg);
 }
 
-.sections-categories-item:nth-child(6) div {
-  background-image: url(/img/decor/categories-6.svg);
-  background-repeat: no-repeat;
-  background-position: 50%;
+.sections-categories--decor-item-sw {
+  background-image: url(../img/decor/categories-5.svg);
+}
+
+.sections-categories--decor-item-qc {
+  background-image: url(../img/decor/categories-6.svg);
 }
 
 /*Сервисы*/
@@ -296,19 +289,19 @@ a {
 }
 
 .tab-content-delivery {
-  background-image: url(/img/decor/services_delivery.svg);
+  background-image: url(../img/decor/services_delivery.svg);
   background-repeat: no-repeat;
   background-position: right;
 }
 
 .tab-content-guarantee {
-  background-image: url(/img/decor/services_guarantee.svg);
+  background-image: url(../img/decor/services_guarantee.svg);
   background-repeat: no-repeat;
   background-position: right;
 }
 
 .tab-content-credit {
-  background-image: url(/img/decor/services_credit.svg);
+  background-image: url(../img/decor/services_credit.svg);
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -317,7 +310,7 @@ a {
 
 .modal-delivery-link::before {
   background-color: #ffe17f;
-  background-image: url(/img/decor/delivery.svg);
+  background-image: url(../img/decor/delivery.svg);
   background-repeat: no-repeat;
   background-position: 0% 50%;
 }
@@ -338,7 +331,7 @@ a {
   background-color: #f0f0f0;
 
   width: 1160px;
-  height: 100px;
+  min-height: 100px;
 }
 
 /*Доставка под заказ (модальное окно)*/
@@ -347,8 +340,6 @@ a {
 }
 
 .send-form label {
-  font-family: "Rubik", "Arial", sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
@@ -358,7 +349,8 @@ a {
   color: #000000;
 }
 
-::placeholder {
+/*
+.send-form-input::placeholder {
   font-family: "Rubik", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -372,12 +364,9 @@ a {
 
   opacity: 0.6;
 }
+*/
 
-.send-form input,
-textarea {
-  font-family: "Rubik", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
+.send-form-input {
   font-size: 16px;
   line-height: 20px;
 
@@ -387,26 +376,25 @@ textarea {
   color: #000000;
 }
 
-/*О компании*/
+/*О компании/Контакты*/
 
 .about-company--link,
 .contacts--link {
   width: 260px;
 }
 
+.contacts-schedule-list {
+  list-style-type: none;
+}
+
 .contacts-address-text {
-  font-family: "Rubik", "Arial", sans-serif;
   font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  color: #444444;
 }
 
 .contacts-phone {
-  font-family: "Rubik", "Arial", sans-serif;
   font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 30px;
   text-decoration-line: underline;
@@ -415,6 +403,11 @@ textarea {
 }
 
 /*footer*/
+
+.footer-nav-list,
+.footer-social-list {
+  list-style-type: none;
+}
 
 .main-footer {
   background-color: #444444;
@@ -426,9 +419,6 @@ textarea {
 }
 
 .footer-address p {
-  font-family: "Rubik", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
 }
@@ -448,9 +438,6 @@ textarea {
 }
 
 .footer-contacts-phone {
-  font-family: "Rubik", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 30px;
   text-align: right;
@@ -466,9 +453,6 @@ textarea {
 */
 
 .main-catalog {
-  font-family: "Rubik", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
 
@@ -486,11 +470,9 @@ textarea {
 }
 
 .breadcrumbs-link {
-  font-family: "Rubik", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
+  text-decoration: none;
 
   color: #000000;
 
@@ -518,14 +500,12 @@ textarea {
   color: #000000;
 
   width: 468px;
-  height: 20px;
+  min-height: 20px;
 
   background-color: #dcdcdc;
 }
 
 .catalog-filter-title {
-  font-family: "Rubik", "Arial", sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
@@ -541,7 +521,7 @@ textarea {
   padding-bottom: 25px;
 
   width: 468px;
-  height: 20px;
+  min-height: 20px;
   background-color: #ebebeb;
 }
 
@@ -560,9 +540,6 @@ textarea {
 }
 
 .sorting-type select {
-  font-family: "Rubik", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
 
@@ -577,10 +554,11 @@ textarea {
 }
 
 /*Карточки продуктов каталога*/
+.product-card-link {
+  text-decoration: none;
+}
 
 .product-card-title {
-  font-family: "Rubik", "Arial", sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -593,9 +571,6 @@ textarea {
 }
 
 .product-card-price {
-  font-family: "Rubik", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   text-align: right;
@@ -616,6 +591,7 @@ textarea {
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  text-decoration: none;
 
   padding-top: 18px;
   padding-bottom: 18px;
@@ -643,12 +619,9 @@ textarea {
 }
 
 .pagination-link {
-  font-family: "Rubik", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-
+  text-decoration: none;
   text-align: center;
 
   color: #444444;
