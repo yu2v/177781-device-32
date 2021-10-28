@@ -30,7 +30,16 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
   font-family: "Rubik", "Arial", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -38,12 +47,20 @@ body {
   line-height: 30px;
   color: #444444;
   background-color: #ffffff;
+
+  outline: 2px solid rgb(248, 54, 5);
+  outline-offset: -2px;
+}
+
+.hidden {
+  display: none;
 }
 
 .slider h3,
 .services h3,
 .send-form h3,
 .about-company h3,
+.сontacts h3,
 .mailing h3 {
   font-family: "Raleway", "Arial", sans-serif;
   font-style: normal;
@@ -54,8 +71,22 @@ body {
 }
 
 .main-header {
+  width: 1160px;
+  min-height: 173px;
+  margin: 0 auto;
+  margin-top: 40px;
   background-color: #ffe17f;
   color: #000000;
+
+  outline: 2px solid rgb(248, 54, 5);
+  outline-offset: -2px;
+}
+
+.main-container {
+  flex-grow: 1;
+
+  outline: 3px solid rgb(217, 255, 5);
+  outline-offset: -3px;
 }
 
 .btn {
@@ -110,8 +141,31 @@ body {
 
 /* Главная навигация */
 /*Основное меню*/
+.navigation {
+  display: flex;
+  flex-direction: column;
+  width: 1041px;
+  margin: 0 auto;
+
+  outline: 5px solid red;
+  outline-offset: -5px;
+}
+
 .navigation-list {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
+
+  display: flex;
+
+  outline: 2px solid rgb(28, 201, 28);
+  outline-offset: -2px;
+}
+
+.main-menu {
+  margin-top: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .navigation-link {
@@ -128,12 +182,43 @@ body {
 }
 
 /*Пользовательское меню*/
+.navigation-user {
+  display: flex;
+  width: 1041px;
+
+  outline: 3px solid green;
+  outline-offset: -3px;
+}
+
+.navigation-user-list {
+  display: flex;
+  margin-left: auto;
+  justify-content: space-around;
+  width: 255px;
+  outline: 2px solid rgb(37, 20, 192);
+  outline-offset: -2px;
+}
+
+.search-navigation-user {
+  width: 480px;
+  outline: 2px solid rgb(128, 0, 90);
+  outline-offset: -2px;
+}
+
 .navigation-link-user {
   font-size: 16px;
   line-height: 19px;
   text-decoration: none;
-
+  /* margin-left: auto; */
   color: #000000;
+}
+
+.navigation-link-login {
+  width: 220px;
+  align-self: center;
+
+  outline: 2px solid rgb(128, 0, 90);
+  outline-offset: -2px;
 }
 
 .navigation-link-logout {
@@ -146,6 +231,12 @@ body {
 }
 
 /*Основное меню_саб-меню (скрытое)*/
+.sub-menu-cat {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .sub-menu-cat a {
   font-size: 16px;
   line-height: 18px;
@@ -160,7 +251,26 @@ body {
  ##################
 */
 
+.page-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
 /*Слайдер*/
+
+.slider {
+  /* height: 560px; */
+
+  outline: 2px solid rgb(248, 54, 5);
+  outline-offset: -2px;
+}
+
+.slider-item {
+}
+
+.slider-item:not(:first-child) {
+  display: none;
+}
 
 .slider-list,
 .slider-pagination {
@@ -221,13 +331,22 @@ body {
 }
 
 /*Категории каталога*/
+.sections-categories {
+  outline: 2px solid rgb(248, 54, 5);
+  outline-offset: -2px;
+}
 
 .sections-categories-list {
   list-style-type: none;
   display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 .sections-categories-item {
+  margin: 0;
+  padding: 0;
   width: 160px;
 }
 
@@ -238,6 +357,7 @@ body {
 .sections-categories-link span {
   display: block;
   height: 60px;
+  margin-top: 33px;
 
   font-family: "Raleway", "Arial", sans-serif;
   font-weight: 800;
@@ -260,10 +380,12 @@ body {
 
 .sections-categories--decor-item-vr {
   background-image: url(../img/decor/categories-1.svg);
+  background-position: center;
 }
 
 .sections-categories--decor-item-mp {
   background-image: url(../img/decor/categories-2.svg);
+  background-position: bottom;
 }
 
 .sections-categories--decor-item-ac {
@@ -286,6 +408,9 @@ body {
 
 .services {
   background-color: #f0f0f0;
+
+  outline: 2px solid rgb(248, 54, 5);
+  outline-offset: -2px;
 }
 
 .tab-content-delivery {
@@ -308,11 +433,17 @@ body {
 
 /*Доставка под заказ*/
 
+.modal-delivery {
+  outline: 2px solid rgb(54, 7, 224);
+  outline-offset: -2px;
+}
+
 .modal-delivery-link::before {
   background-color: #ffe17f;
   background-image: url(../img/decor/delivery.svg);
   background-repeat: no-repeat;
   background-position: 0% 50%;
+  z-index: 10;
 }
 
 .modal-delivery-link {
@@ -323,19 +454,23 @@ body {
   font-size: 20px;
   line-height: 23px;
   text-align: center;
+
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
 
+  padding-top: 37px;
+
   background-color: #f0f0f0;
 
   width: 1160px;
-  min-height: 100px;
+  min-height: 63px;
 }
 
 /*Доставка под заказ (модальное окно)*/
 .send-form {
+  display: none;
   background-color: #ffffff;
 }
 
@@ -378,6 +513,23 @@ body {
 
 /*О компании/Контакты*/
 
+.about-company-сontacts {
+  display: flex;
+  justify-content: space-between;
+
+  outline: 5px solid red;
+  outline-offset: -5px;
+}
+
+.about-company,
+.сontacts {
+  width: 560px;
+  min-height: 562px;
+
+  outline: 2px solid rgb(11, 236, 60);
+  outline-offset: -2px;
+}
+
 .about-company--link,
 .contacts--link {
   width: 260px;
@@ -402,11 +554,33 @@ body {
   color: #444444;
 }
 
+/*Рассылка*/
+.mailing {
+  outline: 2px solid rgb(248, 54, 5);
+  outline-offset: -2px;
+}
+
 /*footer*/
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 0;
+
+  outline: 2px solid rgb(248, 54, 5);
+  outline-offset: -2px;
+}
 
 .footer-nav-list,
 .footer-social-list {
   list-style-type: none;
+}
+
+.footer-logo-link {
+  display: block;
+  margin-top: 62px;
 }
 
 .main-footer {
@@ -416,11 +590,40 @@ body {
 
 .main-footer p {
   color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-address {
+  width: 239px;
+
+  outline: 2px solid rgb(248, 54, 5);
+  outline-offset: -2px;
 }
 
 .footer-address p {
   font-size: 16px;
   line-height: 19px;
+}
+
+.footer-nav {
+  width: 440px;
+
+  margin-left: 64px;
+
+  outline: 2px solid orange;
+  outline-offset: -2px;
+  padding: 0;
+}
+
+.footer-nav-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.footer-nav-item {
 }
 
 .footer-nav-item a {
@@ -437,6 +640,13 @@ body {
   color: #ffffff;
 }
 
+.footer-phone {
+  min-width: 293px;
+
+  outline: 2px solid rgb(238, 234, 5);
+  outline-offset: -2px;
+}
+
 .footer-contacts-phone {
   font-size: 16px;
   line-height: 30px;
@@ -444,6 +654,27 @@ body {
 
   text-decoration: none;
   color: #ffffff;
+
+  outline: 2px solid rgb(10, 247, 41);
+  outline-offset: -2px;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  outline: 2px solid rgb(10, 247, 41);
+  outline-offset: -2px;
+  padding: 0;
+}
+
+.footer-social-item {
+  width: 40px;
+  height: 40px;
+
+  margin-left: 15px;
+
+  outline: 2px solid rgb(245, 73, 6);
+  outline-offset: -2px;
 }
 
 /*
@@ -459,6 +690,14 @@ body {
   color: #000000;
 }
 
+.catalog-header {
+  width: 1041px;
+  margin: 0 auto;
+
+  outline: 2px solid rgb(248, 72, 3);
+  outline-offset: -2px;
+}
+
 .catalog-header-title {
   font-family: "Raleway", "Arial", sans-serif;
   font-style: normal;
@@ -466,7 +705,23 @@ body {
   font-size: 50px;
   line-height: 50px;
 
+  margin: 0;
+  padding-top: 37px;
+
   color: #000000;
+}
+
+/*Хлебные крошки*/
+.breadcrumbs {
+  display: flex;
+  /* margin: 0; */
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.breadcrumbs-item {
+  margin-right: 35px;
 }
 
 .breadcrumbs-link {
@@ -480,8 +735,25 @@ body {
 }
 
 /*Фильтр*/
+.container-catalog {
+  display: flex;
+
+  outline: 5px solid rgb(248, 72, 3);
+  outline-offset: -5px;
+}
+
+.container-filter {
+  background-color: #dcdcdc;
+}
+
 .catalog-filter {
   background-color: #e5e5e5;
+
+  outline: 2px solid rgb(248, 72, 3);
+  outline-offset: -2px;
+}
+
+.container-products {
 }
 
 .catalog-products h2 {
@@ -494,15 +766,13 @@ body {
   text-transform: uppercase;
   text-align: center;
 
+  margin: 0;
   padding-top: 25px;
   padding-bottom: 25px;
 
   color: #000000;
-
-  width: 468px;
+  width: 1100px;
   min-height: 20px;
-
-  background-color: #dcdcdc;
 }
 
 .catalog-filter-title {
@@ -554,6 +824,14 @@ body {
 }
 
 /*Карточки продуктов каталога*/
+
+.product-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 760px;
+}
+
 .product-card-link {
   text-decoration: none;
 }
