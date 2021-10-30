@@ -7,80 +7,95 @@
   </head>
   <body>
     <header class="main-header">
-      <h1 class="visually-hidden">Интернет магазин «device»</h1>
-      <a class="main-logo-link" href="index.html"
-        ><img
-          class="main-logo-img"
-          src="img/decor/main-logo.svg"
-          alt="Логотип device"
-          width="145"
-          height="36"
-      /></a>
-      <nav class="navigation">
-        <!--Пользовательское меню begin-->
-        <div class="navigation-user">
-          <form
-            class="search-navigation-user"
-            action="https://echo.htmlacademy.ru/"
-            method="GET"
-          >
-            <input name="search" placeholder="Поиск по сайту" type="search" />
-            <button class="button-search" type="submit">Найти</button>
-          </form>
-          <a class="navigation-link-login navigation-link-user" href=""
-            >Войти</a
-          >
-          <ul class="navigation-list navigation-user-list">
-            <li class="navigation-item-user">
-              <a class="navigation-link-user" href="">Сравнить</a>
-            </li>
-            <li class="navigation-item-user">
-              <a class="navigation-link-user" href="">Корзина</a>
-            </li>
-          </ul>
-        </div>
-        <!--Пользовательское меню end-->
+      <!--Сделал отдельный контейнер потому как нужно установить фон ограниченный по ширине, если поставить класс ".page-container" то потребуется еще одна обертка для фона-->
+      <div class="page-container">
+        <div class="header-container">
+          <h1 class="visually-hidden">Интернет магазин «device»</h1>
+          <a class="main-logo-link" href="index.html"
+            ><img
+              class="main-logo-img"
+              src="img/decor/main-logo.svg"
+              alt="Логотип device"
+              width="145"
+              height="36"
+          /></a>
+          <nav class="navigation">
+            <!--Пользовательское меню begin-->
+            <div class="navigation-user">
+              <form
+                class="search-navigation-user"
+                action="https://echo.htmlacademy.ru/"
+                method="GET"
+              >
+                <input
+                  name="search"
+                  placeholder="Поиск по сайту"
+                  type="search"
+                />
+                <button class="button-search" type="submit">Найти</button>
+              </form>
+              <a class="navigation-link-login navigation-link-user" href=""
+                >Войти</a
+              >
+              <ul class="navigation-list navigation-user-list">
+                <li class="navigation-item-user">
+                  <a class="navigation-link-user" href="">Сравнить</a>
+                </li>
+                <li class="navigation-item-user">
+                  <a class="navigation-link-user" href="">Корзина</a>
+                </li>
+              </ul>
+            </div>
+            <!--Пользовательское меню end-->
 
-        <!--Основное меню begin-->
-        <ul class="navigation-list main-menu">
-          <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Каталог товаров</a>
-            <button class="button-catalog" aria-expanded="false" type="button">
-              <span class="visually-hidden">Дополнительное меню</span>
-            </button>
-            <ul class="sub-menu-cat hidden">
+            <!--Основное меню begin-->
+            <ul class="navigation-list main-menu">
               <li class="navigation-item">
-                <a href="#">Виртуальная реальность</a>
+                <a class="navigation-link" href="catalog.html"
+                  >Каталог товаров</a
+                >
+                <button
+                  class="button-catalog"
+                  aria-expanded="false"
+                  type="button"
+                >
+                  <span class="visually-hidden">Дополнительное меню</span>
+                </button>
+                <ul class="sub-menu-cat hidden">
+                  <li class="navigation-item">
+                    <a href="#">Виртуальная реальность</a>
+                  </li>
+                  <li class="navigation-item-sub">
+                    <a href="#">Моноподы для cелфи</a>
+                  </li>
+                  <li class="navigation-item-sub">
+                    <a href="#">Экшн-камеры</a>
+                  </li>
+                  <li class="navigation-item-sub">
+                    <a href="#">Фитнес-браслеты</a>
+                  </li>
+                  <li class="navigation-item-sub">
+                    <a href="#">Умные часы</a>
+                  </li>
+                  <li class="navigation-item-sub">
+                    <a href="#">Квадрокоптеры</a>
+                  </li>
+                </ul>
               </li>
-              <li class="navigation-item-sub">
-                <a href="#">Моноподы для cелфи</a>
+              <li class="navigation-item">
+                <a class="navigation-link" href="">Доставка</a>
               </li>
-              <li class="navigation-item-sub">
-                <a href="#">Экшн-камеры</a>
+              <li class="navigation-item">
+                <a class="navigation-link" href="">Гарантия</a>
               </li>
-              <li class="navigation-item-sub">
-                <a href="#">Фитнес-браслеты</a>
-              </li>
-              <li class="navigation-item-sub">
-                <a href="#">Умные часы</a>
-              </li>
-              <li class="navigation-item-sub">
-                <a href="#">Квадрокоптеры</a>
+              <li class="navigation-item">
+                <a class="navigation-link" href="">Контакты</a>
               </li>
             </ul>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="">Доставка</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="">Гарантия</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="">Контакты</a>
-          </li>
-        </ul>
-        <!--Основное меню end-->
-      </nav>
+            <!--Основное меню end-->
+          </nav>
+        </div>
+      </div>
     </header>
 
     <main class="main-container main-index">
@@ -524,6 +539,7 @@
             height="36"
           />
         </a>
+
         <div class="footer-container">
           <div class="footer-address">
             <p>Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
