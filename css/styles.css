@@ -747,7 +747,7 @@ body {
 
 /*Фильтр*/
 
-.filter-container {
+.left-column--filter-container {
   background-color: #dcdcdc;
   outline: 5px solid rgb(16, 126, 25);
   outline-offset: -5px;
@@ -760,7 +760,7 @@ body {
   outline-offset: -2px;
 }
 
-.products-container {
+.right-column--products-container {
   outline: 5px solid rgb(248, 72, 3);
   outline-offset: -5px;
 }
@@ -842,7 +842,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
   width: 760px;
+  margin: 0;
+  padding-left: 72px;
+  padding-top: 69px;
+
+  list-style-type: none;
 }
 
 .product-card-link {
@@ -886,6 +892,7 @@ body {
 
   padding-top: 18px;
   padding-bottom: 18px;
+  margin-left: 72px;
 
   color: #000000;
 
@@ -893,6 +900,36 @@ body {
 
   border: 3px solid #e6e6e6;
   box-sizing: border-box;
+}
+
+.pagination-list {
+  display: flex;
+  align-items: center;
+
+  margin-left: 72px;
+  margin-top: 51px;
+  margin-bottom: 77px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  list-style-type: none;
+
+  height: 70px;
+
+  outline: 5px solid rgb(248, 72, 3);
+  outline-offset: -5px;
+}
+
+.pagination-item {
+  margin-right: 10px;
+}
+
+.pagination-item:first-child {
+  margin-right: 189px;
+}
+
+.pagination-item:last-child {
+  margin-left: auto;
 }
 
 .pagination-text {
@@ -914,6 +951,8 @@ body {
   line-height: 19px;
   text-decoration: none;
   text-align: center;
+
+  padding: 10px;
 
   color: #444444;
   opacity: 0.3;
