@@ -55,7 +55,7 @@
                   >Каталог товаров</a
                 >
                 <button
-                  class="button-catalog"
+                  class="button-catalog--sub-menu"
                   aria-expanded="false"
                   type="button"
                 >
@@ -119,7 +119,9 @@
               <!-- Блок с описанием товара -->
               <div class="slider-part-item">
                 <p class="slider-part">01</p>
-                <h3>Порхает как бабочка, жалит как пчела!</h3>
+                <h3 class="slide-title">
+                  Порхает как бабочка, жалит как пчела!
+                </h3>
                 <p class="slider-description">
                   Этот обычный, на первый взгляд, квадрокоптер оснащен мощным
                   лазером, замаскированным под стандартную камеру.
@@ -152,7 +154,7 @@
               <!-- Блок с описанием товара -->
               <div class="slider-part-item">
                 <p class="slider-part">02</p>
-                <h3>Худеем правильно!</h3>
+                <h3 class="slide-title">Худеем правильно!</h3>
                 <p class="slider-description">
                   Мотивирующие фитнес-браслеты помогут найти в себе силы не
                   пропускать занятия и соблюдать диету.
@@ -183,7 +185,7 @@
               <!-- Блок с описанием товара -->
               <div class="slider-part-item">
                 <p class="slider-part">01</p>
-                <h3>Делай селфи, как Бен Стиллер!</h3>
+                <h3 class="slide-title">Делай селфи, как Бен Стиллер!</h3>
                 <p class="slider-description">
                   Самая длинная палка для селфи доступна в нашем магазине.
                   Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
@@ -310,30 +312,30 @@
         </section>
         <!--Категории каталога end-->
       </div>
-      >
+
       <!--Сервисы begin-->
       <section class="services">
         <div class="page-container">
           <h2 class="visually-hidden">Сервисы: Доставка, гарантия, кредит</h2>
           <div class="services-tabs">
-            <div class="tab-content-delivery">
-              <h3>Доставка</h3>
-              <p>
-                Мы с удовольствием доставим ваш товар прямо к вашему подъезду
-                совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его
-                на ваш этаж.
+            <div class="tab-content-delivery tab-content">
+              <h3 class="tab-content--title">Доставка</h3>
+              <p class="tab-content--description">
+                Мы с удовольствием доставим ваш товар прямо<br />
+                к вашему подъезду совершенно бесплатно! Ведь<br />
+                мы неплохо заработаем, поднимая его на ваш этаж.
               </p>
             </div>
-            <div class="tab-content-guarantee">
-              <h3>Гарантия</h3>
-              <p>
+            <div class="tab-content-guarantee tab-content hidden">
+              <h3 class="tab-content--title">Гарантия</h3>
+              <p class="tab-content--description">
                 Если из-за возгорания купленного у нас товара у вас сгорит дом —
                 не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
               </p>
             </div>
-            <div class="tab-content-credit">
-              <h3>Кредит</h3>
-              <p>
+            <div class="tab-content-credit tab-content hidden">
+              <h3 class="tab-content--title">Кредит</h3>
+              <p class="tab-content--description">
                 Залезть в долговую яму стало проще! Кредитные консультанты
                 подберут для вас наиболее выгодные условия кредита. Выгодные для
                 банка, разумеется.
@@ -363,6 +365,7 @@
         </div>
       </section>
       <!--Сервисы end-->
+
       <div class="page-container">
         <!--Доставка под заказ begin-->
         <section class="modal-delivery">
@@ -451,7 +454,7 @@
         <!--О компании begin-->
         <section class="about-company-сontacts" id="contacts">
           <div class="about-company">
-            <h3>О нас</h3>
+            <h3 class="about-company-сontacts--title">О нас</h3>
             <p>
               Огромный выбор гаджетов не оставит равнодушным гика, который есть
               в каждом из нас.
@@ -475,7 +478,7 @@
 
           <div class="сontacts">
             <h2 class="visually-hidden">Контакты</h2>
-            <h3>Контакты</h3>
+            <h3 class="about-company-сontacts--title">Контакты</h3>
             <p>
               Вы можете забрать товар сами, заехав в наш офис. Заодно, сможете
               проверить работоспособность покупки.
@@ -498,33 +501,39 @@
           </div>
         </section>
         <!--О компании end-->
-
-        <!--Рассылка begin-->
-        <section class="mailing">
-          <h3 class="mailing-title">Подпишитесь на рассылку</h3>
-          <p class="mailing-text">
-            Еженедельный дайджест с обзорами новинок, длительными тест-драйвами,
-            распаковками, а также акции, спецпредложения и вот это вот всё.
-          </p>
-          <form
-            class="mailing-form"
-            action="https://echo.htmlacademy.ru/"
-            method="post"
-          >
-            <input
-              class="mailing-form-input"
-              type="email"
-              name="email"
-              placeholder="Ваш e-mail"
-            />
-            <button class="button-mailing-form" type="submit">
-              Подписаться
-            </button>
-          </form>
-          <span class="mailing-text">Это бесплатно</span>
-        </section>
-        <!--Рассылка end-->
       </div>
+      <!--Рассылка begin-->
+      <section class="mailing">
+        <div class="page-container--mailing">
+          <div class="mailing-container">
+            <h3 class="mailing-title">Подпишитесь на рассылку</h3>
+            <p class="mailing-text">
+              Еженедельный дайджест с обзорами новинок, длительными
+              тест-драйвами, распаковками, а также акции, спецпредложения и вот
+              это вот всё.
+            </p>
+          </div>
+          <div class="mailing-container--subscibse">
+            <form
+              class="mailing-form"
+              action="https://echo.htmlacademy.ru/"
+              method="post"
+            >
+              <input
+                class="mailing-form-input"
+                type="email"
+                name="email"
+                placeholder="Ваш e-mail"
+              />
+              <button class="button-mailing-form" type="submit">
+                Подписаться
+              </button>
+            </form>
+            <span class="mailing-text">Это бесплатно</span>
+          </div>
+        </div>
+      </section>
+      <!--Рассылка end-->
     </main>
 
     <!--footer-->

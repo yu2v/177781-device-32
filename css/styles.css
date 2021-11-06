@@ -60,8 +60,8 @@ body {
 .slider h3,
 .services h3,
 .send-form h3,
-.about-company h3,
-.сontacts h3,
+/* .about-company h3, */
+/* .сontacts h3, */
 .mailing h3 {
   font-family: "Raleway", "Arial", sans-serif;
   font-style: normal;
@@ -69,6 +69,7 @@ body {
   font-size: 50px;
   line-height: 50px;
   color: #000000;
+  margin: 0;
 }
 
 .main-header {
@@ -83,6 +84,7 @@ body {
 /*Сделал отдельный контейнер потому как нужно установить фон для header*/
 .header-container {
   background-color: #ffe17f;
+  height: 300px;
 }
 
 .main-container {
@@ -141,14 +143,22 @@ body {
 
   text-decoration: none;
 }
+/*header*/
+.main-logo-link {
+  display: block;
+  position: relative;
+
+  top: -25px;
+  left: 60px;
+}
 
 /* Главная навигация */
 /*Основное меню*/
 .navigation {
   display: flex;
   flex-direction: column;
-  padding-left: 60px;
-  padding-right: 59px;
+
+  /* padding-top: 45px; */
 
   outline: 5px solid red;
   outline-offset: -5px;
@@ -160,6 +170,9 @@ body {
   list-style-type: none;
 
   display: flex;
+  /* justify-content: baseline; */
+
+  max-height: 50px;
 
   outline: 2px solid rgb(28, 201, 28);
   outline-offset: -2px;
@@ -167,11 +180,50 @@ body {
 
 .main-menu {
   margin-top: 25px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+
+  padding-left: 40px;
+  padding-right: 35px;
+}
+
+.button-catalog--sub-menu {
+  position: relative;
+  top: -51px;
+  left: 263px;
+
+  width: 50px;
+  height: 50px;
+
+  background: #ffe17f;
+  background-image: url(../img/decor/main-menu--sub-menu_plus-no_opacity.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  opacity: 0.2;
+
+  border: 2px solid #000000;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+
+.navigation-item {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-item:nth-child(2) {
+  margin-right: -10px;
+}
+
+.navigation-item:first-child {
+  margin-right: 274px;
+}
+
+.navigation-item:last-child {
+  margin-left: auto;
 }
 
 .navigation-link {
+  display: block;
+
   font-family: "Raleway", "Arial", sans-serif;
   font-weight: 800;
   font-style: normal;
@@ -181,12 +233,20 @@ body {
   text-transform: uppercase;
   text-decoration: none;
 
+  padding-top: 14px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+
   color: #000000;
 }
 
 /*Пользовательское меню*/
 .navigation-user {
   display: flex;
+
+  padding-left: 60px;
+  padding-right: 25px;
 
   outline: 3px solid green;
   outline-offset: -3px;
@@ -265,21 +325,66 @@ body {
 
 .slider {
   /* height: 560px; */
+  position: relative;
+  top: -150px;
 
   outline: 2px solid rgb(248, 54, 5);
   outline-offset: -2px;
 }
 
+.slider-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
 .slider-item {
+  display: flex;
 }
 
 .slider-item:not(:first-child) {
   display: none;
 }
 
-.slider-list,
 .slider-pagination {
+  position: relative;
+  top: -280px;
+  left: 1020px;
+
+  display: flex;
+  justify-content: space-between;
+
+  width: 80px;
+  max-height: 12px;
+
+  margin: 0;
+  padding: 0;
+
   list-style-type: none;
+}
+
+.slider-pagination-button {
+  width: 12px;
+  height: 12px;
+
+  padding: 0;
+
+  border: black 1px solid;
+  border-radius: 100%;
+}
+
+.slider-pagination-item {
+}
+
+.slider-item-img {
+  margin-right: 41px;
+}
+
+.slider-part-item {
+  display: flex;
+  flex-direction: column;
 }
 
 .slider-part {
@@ -290,29 +395,63 @@ body {
   width: 250px; /*Временно*/
   height: 135px; /*Временно*/
 
-  background-color: #ffe17f; /*Временно*/
+  margin: 0;
+  margin-right: 21px;
+  margin-top: 28px;
+
+  /* background-color: #ffe17f; /*Временно*/
   color: #ffffff;
 
   display: flex; /*Временно*/
   align-items: center; /*Временно*/
   text-align: right; /*Временно*/
+  align-self: flex-end;
+}
+
+.slide-title {
+  position: relative;
+  top: -43px;
+  margin: 0;
+}
+
+.slider-description {
+  margin-top: -15px;
+  margin-bottom: 53px;
 }
 
 .slider-link {
   display: block; /*Временно*/
   width: 220px;
   min-height: 20px;
+  margin-bottom: 69px;
+}
+
+.slider-table-specifications {
+  margin: 0;
+  margin-left: -2px;
+  padding: 0;
+  width: 320px;
+  border: 0;
+  border-collapse: collapse;
 }
 
 .slider-table-specifications th {
   font-size: 36px;
   line-height: 30px;
+  font-style: normal;
+  font-weight: 400;
+  width: 160px;
+
+  padding: 0;
+
+  padding-bottom: 10px;
 
   color: #000000;
 }
 
 .slider-table-specifications td {
   font-size: 16px;
+  padding: 0;
 }
 
 /* Кнопки переключения галереи слайдера*/
@@ -322,6 +461,10 @@ body {
 }
 
 .slider-prev {
+  position: relative;
+  top: -320px;
+  left: 18px;
+
   background-image: url(../img/decor/slider-prev.svg);
   background-color: #ffffff;
   background-repeat: no-repeat;
@@ -329,6 +472,10 @@ body {
 }
 
 .slider-next {
+  position: relative;
+  top: -320px;
+  left: 496px;
+
   background-image: url(../img/decor/slider-next.svg);
   background-color: #ffffff;
   background-repeat: no-repeat;
@@ -337,6 +484,8 @@ body {
 
 /*Категории каталога*/
 .sections-categories {
+  margin-top: -160px;
+  margin-bottom: 70px;
   outline: 2px solid rgb(248, 54, 5);
   outline-offset: -2px;
 }
@@ -418,16 +567,41 @@ body {
 /*Сервисы*/
 
 .services {
-  background-color: #f0f0f0;
+  min-height: 388px;
+  margin-bottom: 80px;
+
+  /* background-color: #f0f0f0; */
+
+  background: linear-gradient(to top, #f0f0f0 75%, white 0%);
 
   outline: 2px solid rgb(248, 54, 5);
   outline-offset: -2px;
+}
+
+/* .page-container--services {
+  width: 1160px;
+  margin: 0 auto;
+  padding-left: 140px;
+  padding-right: 140px;
+} */
+
+.services-tabs {
+  display: flex;
+  width: 1094px;
+  margin: 0;
+  padding-top: 70px;
+}
+
+.tab-content {
+  margin-left: 238px;
+  margin-top: -2px;
 }
 
 .tab-content-delivery {
   background-image: url(../img/decor/services_delivery.svg);
   background-repeat: no-repeat;
   background-position: right;
+  /* background-position-x: 500px; */
 }
 
 .tab-content-guarantee {
@@ -442,9 +616,45 @@ body {
   background-position: right;
 }
 
+/*Сервисы-Вкладки-Описание*/
+
+.tab-content--title {
+  width: 560px;
+  min-height: 70px;
+}
+
+.tab-content--description {
+  display: flex;
+
+  width: 497px;
+  min-height: 165px;
+
+  margin: 0;
+  margin-top: 13px;
+}
+
+.services-tabs-buttons {
+  display: flex;
+  flex-direction: column;
+
+  order: -1;
+  margin-top: 16px;
+  margin-left: 1px;
+}
+
+.button-services-tabs {
+  padding: 0;
+}
+
+.button-services-tabs:not(:last-child) {
+  margin-bottom: 45px;
+}
+
 /*Доставка под заказ*/
 
 .modal-delivery {
+  margin-bottom: 97px;
+
   outline: 2px solid rgb(54, 7, 224);
   outline-offset: -2px;
 }
@@ -527,6 +737,9 @@ body {
   display: flex;
   justify-content: space-between;
 
+  padding-top: 45px;
+  margin-bottom: 50px;
+
   outline: 5px solid red;
   outline-offset: -5px;
 }
@@ -540,9 +753,46 @@ body {
   outline-offset: -2px;
 }
 
+.about-company-сontacts--title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+
+  margin: 0;
+  margin-bottom: 47px;
+}
+
+.about-company h3 + p {
+  margin-bottom: 30px;
+}
+
+.сontacts h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
 .about-company--link,
 .contacts--link {
   width: 260px;
+}
+
+.about-company--delivery-list {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+
+  margin-top: 75px;
+  margin-bottom: 70px;
+}
+
+.about-company--delivery-item {
+  margin-bottom: 20px;
 }
 
 .contacts-schedule-list {
@@ -566,8 +816,73 @@ body {
 
 /*Рассылка*/
 .mailing {
+  background: #f0f0f0;
+  min-height: 421px;
+
   outline: 2px solid rgb(248, 54, 5);
   outline-offset: -2px;
+}
+
+.page-container--mailing {
+  width: 1160px;
+  margin: 0 auto;
+  padding-left: 140px;
+  padding-right: 140px;
+  padding-top: 75px;
+  padding-bottom: 131px;
+}
+
+.mailing-title {
+  width: 560px;
+}
+
+.mailing-text {
+  width: 560px;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.mailing-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mailing-container--subscibse {
+  margin-top: 70px;
+  display: flex;
+}
+
+.mailing-form-input {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+
+  background: #f0f0f0;
+  color: #444444;
+
+  border: 0;
+  border-bottom: 3px solid #e6e6e6;
+}
+
+.button-mailing-form {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  /* basic/black */
+
+  color: #000000;
+
+  width: 260px;
+  height: 20px;
+
+  border: 3px solid #e6e6e6;
 }
 
 /*footer*/
@@ -651,7 +966,9 @@ body {
 }
 
 .footer-phone {
-  min-width: 293px;
+  /* min-width: 293px; */
+
+  justify-self: flex-end;
 
   outline: 2px solid rgb(238, 234, 5);
   outline-offset: -2px;
@@ -674,6 +991,8 @@ body {
   justify-content: center;
   outline: 2px solid rgb(10, 247, 41);
   outline-offset: -2px;
+
+  margin-top: 40px;
   padding: 0;
 }
 
@@ -685,6 +1004,12 @@ body {
 
   outline: 2px solid rgb(245, 73, 6);
   outline-offset: -2px;
+}
+
+.htmlacademy-link {
+  position: relative;
+  bottom: 60px;
+  left: 1045px;
 }
 
 /*
