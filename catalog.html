@@ -9,7 +9,7 @@
     <header class="main-header">
       <!--Сделал отдельный контейнер потому как нужно установить фон ограниченный по ширине, если поставить класс ".page-container" то потребуется еще одна обертка для фона-->
       <div class="page-container">
-        <div class="header-container">
+        <div class="header-container--catalog-page">
           <h1 class="visually-hidden">Каталог интернет магазина «device»</h1>
           <a class="main-logo-link" href="index.html"
             ><img
@@ -21,26 +21,32 @@
           /></a>
           <nav class="navigation">
             <!--Пользовательское меню begin-->
-            <form
-              class="search navigation-user"
-              action="https://echo.htmlacademy.ru/"
-              method="GET"
-            >
-              <input name="search" placeholder="Поиск по сайту" type="search" />
-              <button class="button-search" type="submit">Найти</button>
-            </form>
-            <a class="navigation-link-login navigation-link-user" href=""
-              >Коля Петухов
-            </a>
-            <a class="navigation-link-logout" href="#">Выйти</a>
-            <ul class="navigation-list navigation-user-list">
-              <li class="navigation-item-user">
-                <a class="navigation-link-user" href="">Сравнить</a>
-              </li>
-              <li class="navigation-item-user">
-                <a class="navigation-link-user" href="">Корзина</a>
-              </li>
-            </ul>
+            <div class="navigation-user">
+              <form
+                class="search navigation-user"
+                action="https://echo.htmlacademy.ru/"
+                method="GET"
+              >
+                <input
+                  name="search"
+                  placeholder="Поиск по сайту"
+                  type="search"
+                />
+                <button class="button-search" type="submit">Найти</button>
+              </form>
+              <a class="navigation-link-login navigation-link-user" href=""
+                >Коля Петухов
+              </a>
+              <a class="navigation-link-logout" href="#">Выйти</a>
+              <ul class="navigation-list navigation-user-list">
+                <li class="navigation-item-user">
+                  <a class="navigation-link-user" href="">Сравнить</a>
+                </li>
+                <li class="navigation-item-user">
+                  <a class="navigation-link-user" href="">Корзина</a>
+                </li>
+              </ul>
+            </div>
             <!--Пользовательское меню end-->
 
             <!--Основное меню begin-->
@@ -278,9 +284,11 @@
                       </h3>
                       <span class="product-card-price">500 ₽</span>
                     </a>
-                    <a class="btn product-card-link" href="#">Подробнее</a>
+                    <a class="btn button--product-card-link" href="#"
+                      >Подробнее</a
+                    >
                   </li>
-                  <li>
+                  <li class="product-card-item">
                     <img
                       class="product-card-image"
                       src="img/content/catalog-product-2.jpg"
@@ -294,9 +302,11 @@
                       </h3>
                       <span class="product-card-price">1 500 ₽</span>
                     </a>
-                    <a class="btn product-card-link" href="#">Подробнее</a>
+                    <a class="btn button--product-card-link" href="#"
+                      >Подробнее</a
+                    >
                   </li>
-                  <li>
+                  <li class="product-card-item">
                     <img
                       class="product-card-image"
                       src="img/content/catalog-product-3.jpg"
@@ -310,9 +320,11 @@
                       </h3>
                       <span class="product-card-price">2 500 ₽</span>
                     </a>
-                    <a class="btn product-card-link" href="#">Подробнее</a>
+                    <a class="btn button--product-card-link" href="#"
+                      >Подробнее</a
+                    >
                   </li>
-                  <li>
+                  <li class="product-card-item">
                     <img
                       class="product-card-image"
                       src="img/content/catalog-product-4.jpg"
@@ -326,7 +338,9 @@
                       </h3>
                       <span class="product-card-price">4 900 ₽</span>
                     </a>
-                    <a class="btn product-card-link" href="#">Подробнее</a>
+                    <a class="btn button--product-card-link" href="#"
+                      >Подробнее</a
+                    >
                   </li>
                 </ul>
 
