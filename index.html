@@ -32,7 +32,9 @@
                   placeholder="Поиск по сайту"
                   type="search"
                 />
-                <button class="button-search" type="submit">Найти</button>
+                <button class="button-search hidden" type="submit">
+                  Найти
+                </button>
               </form>
               <a class="navigation-link-login navigation-link-user" href=""
                 >Войти</a
@@ -216,30 +218,29 @@
             </button>
           </div>
           <!-- Блок управляющих элементов для переключения слайдов -->
-          <div class="slider-pagination-container">
-            <ol class="slider-pagination">
-              <li class="slider-pagination-item">
-                <button
-                  class="
-                    slider-pagination-button slider-pagination-button-current
-                  "
-                  type="button"
-                >
-                  <span class="visually-hidden">1 слайд</span>
-                </button>
-              </li>
-              <li class="slider-pagination-item">
-                <button class="slider-pagination-button" type="button">
-                  <span class="visually-hidden">2 слайд</span>
-                </button>
-              </li>
-              <li class="slider-pagination-item">
-                <button class="slider-pagination-button" type="button">
-                  <span class="visually-hidden">3 слайд</span>
-                </button>
-              </li>
-            </ol>
-          </div>
+
+          <ol class="slider-pagination">
+            <li class="slider-pagination-item">
+              <button
+                class="
+                  slider-pagination-button slider-pagination-button-current
+                "
+                type="button"
+              >
+                <span class="visually-hidden">1 слайд</span>
+              </button>
+            </li>
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button" type="button">
+                <span class="visually-hidden">2 слайд</span>
+              </button>
+            </li>
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button" type="button">
+                <span class="visually-hidden">3 слайд</span>
+              </button>
+            </li>
+          </ol>
         </section>
         <!--Слайдер end-->
 
@@ -430,8 +431,8 @@
           action="https://echo.htmlacademy.ru/"
           method="post"
         >
-          <h3>Доставка под заказ</h3>
-          <button class="button-close">
+          <h3 class="send-form--title">Доставка под заказ</h3>
+          <button class="send-form--button-close">
             <span class="visually-hidden">закрыть</span>
           </button>
           <p class="send-form--name-surname">
@@ -496,7 +497,9 @@
             </div>
           </div>
           <!-- Кнопка для отправки формы -->
-          <button class="btn button" type="submit">Отправить</button>
+          <button class="btn send-form--button-send" type="submit">
+            Отправить
+          </button>
         </form>
         <!-- Форма обратной связи end-->
 

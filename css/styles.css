@@ -148,10 +148,6 @@ body {
 .main-logo-link {
   display: inline-block;
   margin-left: 61px;
-  /* position: relative;
-
-  top: -25px;
-  left: 60px; */
 }
 
 /* Главная навигация */
@@ -159,8 +155,6 @@ body {
 .navigation {
   display: flex;
   flex-direction: column;
-
-  /* padding-top: 45px; */
 }
 
 .navigation-list {
@@ -169,12 +163,7 @@ body {
   list-style-type: none;
 
   display: flex;
-  /* justify-content: baseline; */
-
   max-height: 50px;
-
-  /* outline: 2px solid rgb(28, 201, 28);
-  outline-offset: -2px; */
 }
 
 .main-menu {
@@ -247,9 +236,6 @@ body {
 
   padding-left: 44px;
   padding-right: 25px;
-
-  /* outline: 3px solid green;
-  outline-offset: -3px; */
 }
 
 .navigation-user-list {
@@ -257,6 +243,7 @@ body {
   margin-left: auto;
   justify-content: space-around;
   width: 255px;
+
   outline: 2px solid rgb(37, 20, 192);
   outline-offset: -2px;
 }
@@ -386,13 +373,11 @@ body {
 /*Слайдер*/
 
 .slider {
+  position: relative;
   background-image: linear-gradient(180deg, #ffe17f 150px, #fff 150px);
   margin-bottom: 70px;
 
   max-height: 560px;
-
-  outline: 2px solid rgb(248, 54, 5);
-  outline-offset: -2px;
 }
 
 .slider-list {
@@ -415,13 +400,9 @@ body {
   display: none;
 }
 
-.slider-pagination-container {
-  position: relative;
-}
-
 .slider-pagination {
   position: absolute;
-  top: -210px;
+  top: 350px;
   right: 60px;
 
   display: flex;
@@ -481,9 +462,15 @@ body {
 
 .slider-part-item {
   position: relative;
+  padding-top: 120px;
 }
 
 .slider-part {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  z-index: 1;
+
   font-weight: 800;
   font-size: 180px;
   line-height: 30px;
@@ -506,12 +493,12 @@ body {
 }
 
 .slide-title {
-  position: absolute;
-  top: 120px;
+  position: relative;
+  z-index: 2;
 }
 
 .slider-description {
-  margin-top: 85px;
+  margin-top: 30px;
   margin-bottom: 38px;
 }
 
@@ -580,8 +567,9 @@ body {
 
 /* Кнопки переключения галереи слайдера*/
 .slider-button--container {
-  position: relative;
-  height: 0px;
+  position: absolute;
+  top: 240px;
+  left: 10px;
 }
 
 .slider-button {
@@ -598,15 +586,16 @@ body {
 }
 
 .slider-prev {
-  position: absolute;
+  /* position: absolute;
   top: -320px;
-  left: 8px;
+  left: 8px; */
+  margin-right: 457px;
 }
 
 .slider-next {
-  position: absolute;
+  /*  position: absolute;
   top: -320px;
-  left: 510px;
+  left: 510px; */
 
   transform: rotate(180deg);
 }
@@ -628,8 +617,6 @@ body {
 /*Категории каталога*/
 .sections-categories {
   margin-bottom: 70px;
-  outline: 2px solid rgb(248, 54, 5);
-  outline-offset: -2px;
 }
 
 .sections-categories-list {
@@ -715,16 +702,8 @@ body {
   background: linear-gradient(to top, #f0f0f0 75%, #ffffff 0%);
 }
 
-/* .page-container--services {
-  width: 1160px;
-  margin: 0 auto;
-  padding-left: 140px;
-  padding-right: 140px;
-} */
-
 .services-tabs {
   display: flex;
-  /* width: 1094px; */
   margin: 0;
   padding-top: 70px;
 }
@@ -735,10 +714,6 @@ body {
 }
 
 .tab-content-delivery {
-  /*  background-image: url(../img/decor/services_delivery.svg);
-  background-repeat: no-repeat;
-  background-position: right; */
-  /* background-position-x: 500px; */
 }
 
 .tab-content-delivery::after {
@@ -784,11 +759,14 @@ body {
   margin-top: 13px;
 }
 
+/*Сервисы-Кнопки Services buttons*/
+
 .services-tabs-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  width: 280px;
   margin-top: 9px;
   margin-left: 3px;
 }
@@ -836,6 +814,10 @@ body {
 
 /* .modal-delivery-link {
   display: block;
+}
+
+.modal-delivery-link::before {
+  content: "";
 } */
 
 .modal-delivery-link--decor-car {
@@ -867,7 +849,8 @@ body {
 }
 
 .modal-delivery-link:focus {
-  border: 5px solid #af4fff;
+  /* border: 5px solid #af4fff; */
+  outline: 5px solid #af4fff;
 }
 
 .modal-delivery-link--decor-info:focus {
@@ -923,9 +906,55 @@ body {
 }
 
 /*Доставка под заказ (модальное окно)*/
-.send-form {
-  display: none;
+/* .send-form {
+  display: grid;
+
+  margin: 0;
+
+  grid-template-columns: 360px 40px 160px 40px 160px;
+  grid-template-rows: 60px 182px 114px 120px;
+
+  padding-left: 80px;
+  padding-right: 80px;
+
   background-color: #ffffff;
+}
+
+/*Новое 15-11-2021
+
+.send-form--title {
+  grid-column: 1/5;
+  grid-row: 1/2;
+}
+
+.send-form--button-close {
+  grid-column: 5/6;
+  grid-row: 1/2;
+}
+
+p .send-form--name-surname {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+
+.send-form--email {
+  grid-column: 3/6;
+  grid-row: 2/3;
+}
+
+.send-form--product {
+  grid-column: 1/5;
+  grid-row: 3/4;
+}
+
+.send-form--number {
+  grid-column: 5/6;
+  grid-row: 3/4;
+}
+
+.send-form--button-send {
+  grid-column: 1/-1;
+  grid-row: 4/5;
 }
 
 .send-form label {
@@ -937,7 +966,7 @@ body {
 
   color: #000000;
 }
-
+ */
 /*
 .send-form-input::placeholder {
   font-family: "Rubik", "Arial", sans-serif;
@@ -973,18 +1002,12 @@ body {
 
   padding-top: 45px;
   margin-bottom: 50px;
-
-  outline: 5px solid red;
-  outline-offset: -5px;
 }
 
 .about-company,
 .сontacts {
   width: 560px;
   min-height: 562px;
-
-  outline: 2px solid rgb(11, 236, 60);
-  outline-offset: -2px;
 }
 
 .about-company-сontacts--title {
@@ -1052,9 +1075,6 @@ body {
 .mailing {
   background: #f0f0f0;
   min-height: 421px;
-
-  outline: 2px solid rgb(248, 54, 5);
-  outline-offset: -2px;
 }
 
 .page-container--mailing {
@@ -1292,14 +1312,14 @@ body {
 }
 
 .footer-social--link {
-  display: block;
+  display: flex;
   position: relative;
+
   width: 40px;
   height: 40px;
 
   border-radius: 100%;
   background-color: #ffffff4d;
-  /* padding: auto; */
 }
 
 .footer-social--link:hover {
@@ -1324,11 +1344,6 @@ body {
 }
 
 .footer-social--icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   margin: auto;
 }
 
