@@ -11,14 +11,16 @@
       <div class="page-container">
         <div class="header-container">
           <h1 class="visually-hidden">Интернет магазин «device»</h1>
-          <a class="main-logo-link" href="index.html"
-            ><img
-              class="main-logo-img"
-              src="img/decor/main-logo.svg"
-              alt="Логотип device"
-              width="145"
-              height="36"
-          /></a>
+          <div class="main-logo-link-container">
+            <a class="main-logo-link" href="index.html"
+              ><img
+                class="main-logo-img"
+                src="img/decor/main-logo.svg"
+                alt="Логотип device"
+                width="145"
+                height="36"
+            /></a>
+          </div>
           <nav class="navigation">
             <!--Пользовательское меню begin-->
             <div class="navigation-user">
@@ -36,9 +38,11 @@
                   Найти
                 </button>
               </form>
-              <a class="navigation-link-login navigation-link-user" href=""
-                >Войти</a
-              >
+              <div class="navigation-link-login-container">
+                <a class="navigation-link-login navigation-link-user" href=""
+                  >Войти</a
+                >
+              </div>
               <ul class="navigation-list navigation-user-list">
                 <li class="navigation-item-user">
                   <a class="navigation-link-user" href="">Сравнить</a>
@@ -390,7 +394,7 @@
 
         <!-- Форма обратной связи begin-->
         <form
-          class="send-form"
+          class="send-form hidden"
           action="https://echo.htmlacademy.ru/"
           method="post"
         >
@@ -483,7 +487,7 @@
               <li class="about-company--delivery-item">СДИК</li>
               <li class="about-company--delivery-item">ТоксБерри</li>
             </ul>
-            <a class="about-company--link link-for-page" href=""
+            <a class="about-company--link link-for-page btn-page-link" href=""
               >Подробнее о нас</a
             >
           </div>
@@ -512,7 +516,9 @@
               <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
               <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
             </ul>
-            <a class="contacts--link link-for-page" href="">Напишите нам</a>
+            <a class="contacts--link link-for-page btn-page-link" href=""
+              >Напишите нам</a
+            >
           </div>
         </section>
         <!--О компании end-->
