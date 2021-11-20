@@ -130,10 +130,10 @@ body {
 
   background-image: linear-gradient(
     180deg,
-    #fff 19px,
-    #ffe17f 19px,
-    #ffe17f 27px,
-    #fff 27px
+    #fff 20px,
+    #ffe17f 20px,
+    #ffe17f 28px,
+    #fff 28px
   );
 }
 
@@ -177,8 +177,10 @@ body {
 }
 
 .header-container--catalog-page {
-  background-image: linear-gradient(0deg, #ffe17f 186px, #fff 186px);
-  min-height: 209px;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(0deg, #ffe17f 185px, #fff 185px);
+  min-height: 211px;
 }
 
 .main-logo-link-container {
@@ -193,12 +195,6 @@ body {
   display: inline-block;
   margin-left: 61px;
 }
-
-/* .main-logo-link::before {
-  display: block;
-  content: "";
-  margin-bottom: 20px;
-} */
 
 /* Главная навигация */
 /*Основное меню*/
@@ -546,6 +542,10 @@ body {
   max-height: 560px;
 }
 
+.slider-wrapper {
+  position: relative;
+}
+
 .slider-list {
   display: flex;
   margin: 0;
@@ -669,8 +669,9 @@ body {
 }
 
 .slider-description {
+  min-height: 80px;
   margin-top: 30px;
-  margin-bottom: 38px;
+  margin-bottom: 16px;
 }
 
 .slider-link {
@@ -685,10 +686,10 @@ body {
 
   background-image: linear-gradient(
     180deg,
-    #fff 19px,
-    #ffe17f 19px,
-    #ffe17f 27px,
-    #fff 27px
+    #fff 20px,
+    #ffe17f 20px,
+    #ffe17f 28px,
+    #fff 28px
   );
 }
 
@@ -745,8 +746,10 @@ body {
 /* Кнопки переключения галереи слайдера*/
 .slider-button--container {
   position: absolute;
-  top: 240px;
-  left: 10px;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  margin-left: 10px;
 }
 
 .slider-button {
@@ -1093,55 +1096,113 @@ body {
 }
 
 /*Доставка под заказ (модальное окно)*/
-/* .send-form {
+.send-form {
+  width: 920px;
+  min-height: 580px;
+
   display: grid;
 
-  margin: 0;
+  align-items: end;
+
+  margin: 0 auto;
 
   grid-template-columns: 360px 40px 160px 40px 160px;
   grid-template-rows: 60px 182px 114px 120px;
+  grid-template-areas:
+    "title title title . button-close"
+    "name-surname . email email email"
+    "product product product . number"
+    "button-send . . . .";
 
+  padding-top: 72px;
+  padding-bottom: 88px;
   padding-left: 80px;
   padding-right: 80px;
 
   background-color: #ffffff;
+
+  box-sizing: border-box;
 }
 
-/*Новое 15-11-2021
+.send-form-input {
+  margin: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f0f0f0;
+
+  padding-left: 20px;
+  padding-right: 50px;
+
+  box-sizing: border-box;
+  border: none;
+}
+
+/*Новое 15-11-2021*/
 
 .send-form--title {
-  grid-column: 1/5;
-  grid-row: 1/2;
+  grid-area: title;
+  justify-self: stretch;
+  /* grid-column: 1/5;
+  grid-row: 1/2; */
 }
 
 .send-form--button-close {
-  grid-column: 5/6;
-  grid-row: 1/2;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: relative;
+  grid-area: button-close;
+  justify-self: end;
+  align-self: center;
+  border: none;
+  background-color: transparent;
 }
 
-p .send-form--name-surname {
-  grid-column: 1/3;
-  grid-row: 2/3;
+.send-form--button-close::after,
+.send-form--button-close::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px; /* cross thickness */
+  background-color: black;
+}
+
+.send-form--button-close::after {
+  transform: rotate(45deg);
+}
+
+.send-form--button-close::before {
+  transform: rotate(-45deg);
+}
+
+.send-form--name-surname {
+  grid-area: name-surname;
 }
 
 .send-form--email {
-  grid-column: 3/6;
-  grid-row: 2/3;
+  justify-self: stretch;
+  grid-area: email;
+}
+
+.send-form--email input {
+  width: 100%;
 }
 
 .send-form--product {
-  grid-column: 1/5;
-  grid-row: 3/4;
+  grid-area: product;
 }
 
 .send-form--number {
-  grid-column: 5/6;
-  grid-row: 3/4;
+  grid-area: number;
+  width: ;
 }
 
 .send-form--button-send {
-  grid-column: 1/-1;
-  grid-row: 4/5;
+  grid-area: button-send;
 }
 
 .send-form label {
@@ -1153,7 +1214,7 @@ p .send-form--name-surname {
 
   color: #000000;
 }
- */
+
 /*
 .send-form-input::placeholder {
   font-family: "Rubik", "Arial", sans-serif;
@@ -1186,8 +1247,7 @@ p .send-form--name-surname {
 .about-company-сontacts {
   display: flex;
   justify-content: space-between;
-
-  margin-bottom: 50px;
+  padding-bottom: 68px;
 }
 
 .about-company,
@@ -1226,7 +1286,8 @@ p .send-form--name-surname {
   margin-bottom: 43px;
 }
 
-.about-company h3 + p {
+.about-company h3 + p,
+.сontacts h3 + p {
   margin-bottom: 30px;
 }
 
@@ -1235,6 +1296,8 @@ p .send-form--name-surname {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
+  margin: 0;
+  margin-bottom: 15px;
 }
 
 .about-company--link,
@@ -1271,6 +1334,9 @@ p .send-form--name-surname {
 }
 
 .contacts-schedule-list {
+  padding: 0;
+  margin-top: 15px;
+  margin-bottom: 55px;
   list-style-type: none;
 }
 
@@ -1278,14 +1344,16 @@ p .send-form--name-surname {
   font-style: normal;
   font-size: 18px;
   line-height: 30px;
+  margin: 0;
 }
 
 .contacts-phone {
+  display: block;
   font-style: normal;
   font-size: 18px;
   line-height: 30px;
   text-decoration-line: underline;
-
+  margin-bottom: 30px;
   color: #444444;
 }
 
@@ -1359,18 +1427,39 @@ p .send-form--name-surname {
 
 /*footer*/
 
+.main-footer {
+  padding-bottom: 61px;
+}
+
 .footer-container {
   display: flex;
-  /* justify-content: space-between;*/
+  justify-content: space-between;
+  width: 100%;
   align-items: center;
   margin-top: 10px;
 
   padding: 0;
 }
 
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 40px;
+  align-items: center;
+  margin-top: 30px;
+}
+
 .footer-nav-list,
 .footer-social-list {
   list-style-type: none;
+}
+
+.footer-social::before {
+  content: "";
+  width: 80px;
+  height: 7px;
+  background-color: #ffc700;
 }
 
 .footer-logo-link {
@@ -1395,7 +1484,7 @@ p .send-form--name-surname {
 
 .footer-address {
   width: 239px;
-  margin-right: 105px;
+  margin-right: 80px;
   padding-top: 5px;
 }
 
@@ -1487,13 +1576,15 @@ p .send-form--name-surname {
 }
 
 .footer-phone {
-  justify-self: stretch;
+  justify-self: flex-end;
 }
 
 .footer-contacts-phone {
+  display: block;
   font-size: 16px;
   line-height: 30px;
   text-align: right;
+  margin-left: 10px;
 
   text-decoration: none;
   color: #ffffff;
@@ -1528,8 +1619,9 @@ p .send-form--name-surname {
   display: flex;
   justify-content: center;
 
-  margin-top: 40px;
+  margin: 0;
   padding: 0;
+  margin: 0 auto;
 }
 
 .footer-social-item {
@@ -1537,6 +1629,10 @@ p .send-form--name-surname {
   height: 40px;
 
   margin-left: 15px;
+}
+
+.footer-social-item:first-child {
+  margin-left: 55px;
 }
 
 .footer-social--link {
@@ -1581,13 +1677,19 @@ p .send-form--name-surname {
   margin: auto;
 }
 
+.htmlacademy-link svg {
+  margin-left: 10px;
+}
+
 .htmlacademy-link {
   display: block;
-  width: 134px;
-  height: 52px;
-  position: relative;
+  width: 114px;
+  height: 32px;
+  /* position: relative;
   bottom: 60px;
-  left: 1045px;
+  left: 1045px; */
+
+  align-self: flex-end;
 
   padding: 10px;
 }
@@ -1600,7 +1702,10 @@ p .send-form--name-surname {
   border: 2px solid #af4fff;
   box-sizing: border-box;
   border-radius: 10px;
-  padding-bottom: 10px;
+  padding: 0;
+  padding-top: 10px;
+  width: 135px;
+  height: 53px;
 }
 
 .htmlacademy-link:focus-visible {
@@ -1728,6 +1833,77 @@ p .send-form--name-surname {
   letter-spacing: -0.02em;
 
   color: #000000;
+}
+
+/*Каталог-Фильтр-цена от и до*/
+.range-scale {
+  position: relative;
+  height: 2px;
+  margin-bottom: 16px;
+  background-color: #dcdcdc;
+}
+
+.range-bar {
+  position: absolute;
+  height: 2px;
+  background-color: #000000;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #ebebeb;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.toggle-min {
+  top: -8px;
+  left: -9px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -9px;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: center;
+}
+
+.catalog-filter-label {
+  display: flex;
+  min-width: 30px;
+  flex-basis: auto;
+  margin-right: 5px;
+  box-sizing: border-box;
+}
+
+.range-filter-input {
+  min-width: 30px;
+  flex-basis: auto;
+  height: 18px;
+  font: inherit;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  appearance: textfield;
+  color: #000000;
+  box-sizing: border-box;
+  opacity: 0.3;
+}
+
+.range-filter-input::-webkit-outer-spin-button,
+.range-filter-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.range-filter-input:focus-visible {
+  outline: none;
 }
 
 /*Сортировка*/
