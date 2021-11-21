@@ -397,84 +397,86 @@
         <!--Доставка под заказ end-->
 
         <!-- Форма обратной связи begin-->
-        <form
-          class="send-form"
-          action="https://echo.htmlacademy.ru/"
-          method="post"
-        >
-          <h3 class="send-form--title">Доставка под заказ</h3>
-          <button class="send-form--button-close">
-            <span class="visually-hidden">закрыть</span>
-          </button>
-          <p class="send-form--name-surname">
-            <label class="send-form-label" for="send-form--name-surname"
-              >Ваше имя:</label
-            >
-            <input
-              required
-              class="send-form-input"
-              id="send-form--name-surname"
-              type="text"
-              name="name-surname"
-              placeholder="Имя Фамилия"
-            />
-            <span class="send-form--name-surname---sign"
-              >Пожалуйста, представьтесь</span
-            >
-          </p>
-          <p class="send-form--email">
-            <label class="send-form-label" for="send-form--email"
-              >Ваш e-mail:</label
-            >
-            <input
-              required
-              class="send-form-input"
-              id="send-form--email"
-              type="email"
-              name="email"
-              placeholder="e-mail@mail.ru"
-            />
-            <span class="send-form--email---sign">Забавный у вас адрес</span>
-          </p>
-          <p required class="send-form--product">
-            <label class="send-form-label" for="send-form--product"
-              >Что нужно привезти:</label
-            >
-            <textarea
-              required
-              class="send-form-input"
-              id="send-form--product"
-              name="product"
-              placeholder="В свободной форме"
-              rows="1"
-            ></textarea>
-          </p>
-          <div class="send-form--number">
-            <label class="send-form-label" for="send-form--number"
-              >Количество:</label
-            >
-            <button class="info" type="button">
-              <span class="visually-hidden"
-                >Посмотреть дополнительную информацию</span
-              >
+        <div class="container-send-form">
+          <form
+            class="send-form"
+            action="https://echo.htmlacademy.ru/"
+            method="post"
+          >
+            <h3 class="send-form--title">Доставка под заказ</h3>
+            <button class="send-form--button-close">
+              <span class="visually-hidden">закрыть</span>
             </button>
-            <div class="number">
-              <button class="number-minus" type="button">-</button>
+            <p class="send-form--name-surname">
+              <label class="send-form-label" for="send-form--name-surname"
+                >Ваше имя:</label
+              >
               <input
+                required
                 class="send-form-input"
-                id="send-form--number"
+                id="send-form--name-surname"
                 type="text"
-                name="number"
-                value="1"
+                name="name-surname"
+                placeholder="Имя Фамилия"
               />
-              <button class="number-plus" type="button">+</button>
+              <span class="send-form--name-surname---sign"
+                >Пожалуйста, представьтесь</span
+              >
+            </p>
+            <p class="send-form--email">
+              <label class="send-form-label" for="send-form--email"
+                >Ваш e-mail:</label
+              >
+              <input
+                required
+                class="send-form-input"
+                id="send-form--email"
+                type="email"
+                name="email"
+                placeholder="e-mail@mail.ru"
+              />
+              <span class="send-form--email---sign">Забавный у вас адрес</span>
+            </p>
+            <p class="send-form--product">
+              <label class="send-form-label" for="send-form--product"
+                >Что нужно привезти:</label
+              >
+              <textarea
+                required
+                class="send-form-input"
+                id="send-form--product"
+                name="product"
+                placeholder="В свободной форме"
+                rows="1"
+              ></textarea>
+            </p>
+            <div class="send-form--number">
+              <label class="send-form-label" for="send-form--number"
+                >Количество:</label
+              >
+              <button class="info" type="button">
+                <span class="visually-hidden"
+                  >Посмотреть дополнительную информацию</span
+                >
+              </button>
+              <div class="number">
+                <button class="number-minus" type="button">-</button>
+                <input
+                  class="send-form-input"
+                  id="send-form--number"
+                  type="text"
+                  name="number"
+                  value="1"
+                />
+                <button class="number-plus" type="button">+</button>
+              </div>
             </div>
-          </div>
-          <!-- Кнопка для отправки формы -->
-          <button class="btn send-form--button-send" type="submit">
-            Отправить
-          </button>
-        </form>
+            <!-- Кнопка для отправки формы -->
+            <button class="btn send-form--button-send" type="submit">
+              Отправить
+            </button>
+          </form>
+        </div>
         <!-- Форма обратной связи end-->
 
         <!--О компании begin-->
